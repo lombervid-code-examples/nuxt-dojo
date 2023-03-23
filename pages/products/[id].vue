@@ -22,7 +22,7 @@ if (!product.value) {
 <template>
   <div>
     <Head>
-      <Title>{{ product.title }} | Nuxt Dojo</Title>
+      <Title>{{ product.title }}</Title>
       <Meta name="description" :content="product.description" />
     </Head>
 

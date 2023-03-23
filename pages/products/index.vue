@@ -14,7 +14,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Merch | Nuxt Dojo',
+  title: 'Merch',
   meta: [
     {
       name: 'description',
