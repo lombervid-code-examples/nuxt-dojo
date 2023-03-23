@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <ProductDetails :product="product" />
-  </div>
-</template>
-
 <script setup>
 definePageMeta({
   layout: 'products',
@@ -24,3 +18,14 @@ if (!product.value) {
   })
 }
 </script>
+
+<template>
+  <div>
+    <Head>
+      <Title>{{ product.title }} | Nuxt Dojo</Title>
+      <Meta name="description" :content="product.description" />
+    </Head>
+
+    <ProductDetails :product="product" />
+  </div>
+</template>

@@ -10,13 +10,23 @@
 
 <script setup>
 definePageMeta({
-  layout: "products",
+  layout: 'products',
+})
+
+useHead({
+  title: 'Merch | Nuxt Dojo',
+  meta: [
+    {
+      name: 'description',
+      content: 'Nuxt 3 Merch',
+    },
+  ],
 })
 
 const cofig = useRuntimeConfig()
 
 const { data: products } = await useFetch('/products?limit=20', {
   baseURL: cofig.public.apiBase,
-  transform: (data) => data.products
+  transform: (data) => data.products,
 })
 </script>
