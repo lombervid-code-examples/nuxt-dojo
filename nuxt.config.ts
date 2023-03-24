@@ -21,7 +21,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     currency: {
-      endpoint: process.env.CURRENCY_ENDPOINT,
+      // endpoint: process.env.NUXT_CURRENCY_ENDPOINT,
+      endpoint: '',
       // apikey: process.env.NUXT_CURRENCY_APIKEY,
       apikey: '',
     },
