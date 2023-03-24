@@ -8,6 +8,13 @@ export default defineEventHandler(async (event) => {
       apikey: config.currency.apikey,
       currencies: code,
     },
+    onResponseError({ response }) {
+      throw createError({
+        statusCode: response?.status,
+        statusMessage: response?.statusText,
+        message: response?._data?.errors['currencies'],
+      })
+    },
   })
 
   return data
