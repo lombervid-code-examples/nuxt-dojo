@@ -1,5 +1,5 @@
 <script setup>
-const { data } = useFetch('/api/ninja')
+const { data } = useFetch('/api/currency/MXN')
 </script>
 
 <template>
